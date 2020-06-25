@@ -223,6 +223,11 @@ def printFilesNormal():
         shot_time = datetime.now().strftime("%Y-%m-%d_%H-%M-%S")
         watermark_filename = os.path.join(image_vault2, ("Watermark_" + shot_time + ".JPG"))
         file_to_print = watermark_filename
+        print([
+            "convert", vault_filename,
+            "-gravity", "south-east",
+            watermark_vorlage_B,
+            "-composite", watermark_filename])
         process = subprocess.Popen([
             "convert", vault_filename,
             "-gravity", "south-east",
@@ -234,6 +239,11 @@ def printFilesNormal():
         shot_time = datetime.now().strftime("%Y-%m-%d_%H-%M-%S")
         watermark_filename = os.path.join(image_vault2, ("Watermark_" + shot_time + ".JPG"))
         file_to_print = watermark_filename
+        print([
+            "convert", vault_filename,
+            "-gravity", "south-east",
+            watermark_vorlage_B,
+            "-composite", watermark_filename])
         process = subprocess.Popen([
             "convert", vault_filename,
             "-gravity", "south-east",
