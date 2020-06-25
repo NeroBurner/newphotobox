@@ -147,6 +147,7 @@ def renameFiles(jpg_file=None, vault=image_vault):
             else:
                 os.rename(filename, vault_file)
                 return vault_file
+    raise IOError("no .JPG file in current directory found")
 
 def printFilesStiched():
     print("printFilesStiched")
